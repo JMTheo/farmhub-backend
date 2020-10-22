@@ -1,7 +1,7 @@
 {
   "name": "iot-home",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/server.js",
   "license": "MIT",
   "scripts": {
     "start": "node index.js",
@@ -22,7 +22,6 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "materialize-css": "^1.0.0-rc.2",
     "mosca": "^2.8.3",
     "mqtt": "^4.2.1",
     "pug": "^3.0.0"
