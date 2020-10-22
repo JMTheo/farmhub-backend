@@ -1,9 +1,20 @@
-ul.pure-menu-list
-  li.pure-menu-item
-      a.pure-menu-link(href="/") Home
-  li.pure-menu-item
-    a.pure-menu-link(href="/plantas") Plantas 
-  li.pure-menu-item
-    a.pure-menu-link(href="/sensores") Sensores
-  li.pure-menu-item
-    a.pure-menu-link(href="#") Histórico
+li
+  a(href='/')
+    span.icon
+      i.fa.fa-home(aria-hidden='true')
+    span.title Home
+li
+  a(href='/plantas')
+    span.icon
+      i.fa.fa-leaf(aria-hidden='true')
+    span.title Plantas
+li
+  a(href='/sensores')
+    span.icon
+      i.fa.fa-microchip(aria-hidden='true')
+    span.title Sensores
+li
+  a(href='#')
+    span.icon
+      i.fa.fa-history(aria-hidden='true')
+    span.title Histórico

@@ -2,21 +2,26 @@ doctype html
 html(lang="pt-br")
   head
     meta(charset="utf-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    link(rel='stylesheet' href='/public/css/pure/pure-min.css')
-    link(rel='stylesheet' href='/public/css/sideMenu.css')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN", crossorigin="anonymous")
+    link(href='https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Poppins&display=swap' rel='stylesheet')
+    link(rel='stylesheet' href='/public/css/style.css')
+
   body
-    #layout
-      // Menu toggle
-      a#menuLink.menu-link(href="#menu")
-        // Hamburger icon
-        span
-      // - Adicionar isso pradeixar dinamico   .menu-item-divided.pure-menu-selected
-      #menu
-        .pure-menu 
-          a.pure-menu-heading(href="#") iPlant
+    main
+      aside.navigation
+         ul
           include partials/menu.pug
-      #main
+      article
         block content
 
-    script(src="/public/js/ui.js")
+        .toggle(onclick='toggleMenu()')
+    script(type='text/javascript').
+      function toggleMenu(){
+        let navigation = document.querySelector('.navigation')
+        let toggle = document.querySelector('.toggle')
+
+        navigation.classList.toggle('active')
+        toggle.classList.toggle('active')
+      }
+    
