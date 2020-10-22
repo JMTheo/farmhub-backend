@@ -15,13 +15,6 @@ html(lang="pt-br")
       article
         block content
 
-        .toggle(onclick='toggleMenu()')
-    script(type='text/javascript').
-      function toggleMenu(){
-        let navigation = document.querySelector('.navigation')
-        let toggle = document.querySelector('.toggle')
-
-        navigation.classList.toggle('active')
-        toggle.classList.toggle('active')
-      }
+      .toggle(onclick='toggleMenu()')
+    script(type='text/javascript' src="/public/js/menu.js")      
     
