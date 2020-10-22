@@ -7,18 +7,39 @@
 
 body {
   min-height: 100vh;
-  color: #777;
+  background: #F4F7FC; /* 777*/
   font: 500 1.2rem Poppins;
 
+}
+main {
+  display: grid;
+  grid-template-areas: 
+    "sidebar sensor sensor"
+    "sidebar planta planta"
+    "sidebar planta planta";
+  grid-template-columns: 1fr 3fr 1fr;
+
+  justify-items: center;
+  align-items: center;
+}
+
+header {
+  grid-area: sensor;
+}
+
+article {
+  grid-area: planta;
 }
 
 .navigation {
   position: fixed;
-  width: 60px;
+  width: 300px;
   height: 100%;
-  background: #3e0748;
+  background: #000000; /*3e0748*/
   transition: 0.5s;
-  overflow: hidden;
+  overflow-y: hidden;
+
+  grid-area: sidebar;
 }
 
 .navigation:hover,
@@ -85,7 +106,7 @@ body {
   right: 0;
   width: 60px;
   height: 60px;
-  background: #330748;
+  background: #000000;
   cursor: pointer;
 }
 
@@ -111,54 +132,14 @@ body {
 
 }
 
-.content {
-  margin: 0 auto;
-  padding: 0 2em;
-  max-width: 800px;
-  margin-bottom: 50px;
-  line-height: 1.6em;
-}
 
-.header {
-  margin: 0;
-  color: #333;
-  text-align: center;
-  padding: 2.5em 2em 0;
-  border-bottom: 1px solid #eee;
-}
-.header h1 {
-  margin: 0.2em 0;
-  font-size: 3em;
-  font-weight: 300;
-}
-.header h2 {
-  font-weight: 300;
-  color: #ccc;
-  padding: 0;
-  margin-top: 0;
-}
 
-.content-subhead {
-  margin: 50px 0 20px 0;
-  font-weight: 300;
-  color: #888;
-}
-
-#main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#navigation.active .layout {
-  left: 150px;
-  width: 150px;
-}
 
 
 @media (max-width: 768px) {
   .navigation {
     left: -60px;
+    width: 60px;
   }
   .navigation.active {
     left: 0px;
