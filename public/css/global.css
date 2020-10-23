@@ -4,6 +4,9 @@
   box-sizing: border-box;
   
 }
+p {
+  text-align: justify;
+}
 
 body {
   min-height: 100vh;
@@ -23,17 +26,19 @@ main {
   align-items: center;
 }
 
-header {
+header #sensor{
   grid-area: sensor;
 }
 
+section,
 article {
+  padding: 10px;
   grid-area: planta;
 }
 
 .navigation {
   position: fixed;
-  width: 300px;
+  width: 18.6%; /*150px/300*/
   height: 100%;
   background: #000000; /*3e0748*/
   transition: 0.5s;
@@ -103,11 +108,12 @@ article {
 .toggle {
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   width: 60px;
   height: 60px;
   background: #000000;
   cursor: pointer;
+  display: none;
 }
 
 .toggle:active {
@@ -132,11 +138,10 @@ article {
 
 }
 
-
-
-
-
 @media (max-width: 768px) {
+  .toggle {
+    display: block;
+  }
   .navigation {
     left: -60px;
     width: 60px;
@@ -144,5 +149,11 @@ article {
   .navigation.active {
     left: 0px;
     width: 100%;
+  }
+}
+
+@media (max-width: 100px) {
+  .navigation {
+    width: 150px;
   }
 }

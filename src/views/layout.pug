@@ -3,9 +3,7 @@ html(lang="pt-br")
   head
     meta(charset="utf-8")
     meta(name='viewport' content='width=device-width, initial-scale=1')
-    link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN", crossorigin="anonymous")
-    link(href='https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Poppins&display=swap' rel='stylesheet')
-    link(rel='stylesheet' href='/public/css/style.css')
+    include partials/imports.pug
 
   body
     main
@@ -15,13 +13,6 @@ html(lang="pt-br")
       article
         block content
 
-        .toggle(onclick='toggleMenu()')
-    script(type='text/javascript').
-      function toggleMenu(){
-        let navigation = document.querySelector('.navigation')
-        let toggle = document.querySelector('.toggle')
-
-        navigation.classList.toggle('active')
-        toggle.classList.toggle('active')
-      }
+      .toggle(onclick='toggleMenu()')
+    script(type='text/javascript' src="/public/js/menu.js")      
     
