@@ -26,14 +26,13 @@ main {
   align-items: center;
 }
 
-header {
+header #sensor{
   grid-area: sensor;
 }
 
 section,
 article {
-  padding-top: 15px;
-  padding-right: 15px;
+  padding: 10px;
   grid-area: planta;
 }
 
@@ -109,7 +108,7 @@ article {
 .toggle {
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   width: 60px;
   height: 60px;
   background: #000000;
