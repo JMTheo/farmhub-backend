@@ -22,9 +22,6 @@ app.use(morgan('dev'))
 app.use(express.json())
 app.use(compression())
 
-// Configurando a engine do html
-app.set('view engine', 'pug')
-app.set('views', path.join(__dirname, 'views'))
 // Configurando a pasta publica de arquivos estáticos
 app.use('/public', express.static('public'))
 
