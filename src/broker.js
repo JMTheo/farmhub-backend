@@ -14,11 +14,15 @@ const ascoltatore = {
 
 // Final settings for Mosca MQTT broker
 const settings = {
-  port: 1883,
+  port: 3000,
   backend: ascoltatore,
   persistence: {
     factory: mosca.persistence.Mongo,
     url: mongoCon
+  },
+  http: {
+    port:1884,
+    bundle: true
   }
 }
 
