@@ -1,5 +1,4 @@
 const mosca = require('mosca')
-
 // Define connection to MongoDB
 const mongoCon = process.env.MONGO_ONLINE_URI
 
@@ -11,17 +10,17 @@ const ascoltatore = {
   pubsubCollection: 'ascoltatori',
   mongo: {}
 }
-
+//backend: ascoltatore,
 // Final settings for Mosca MQTT broker
 const settings = {
   port: 3000,
-  backend: ascoltatore,
+
   persistence: {
     factory: mosca.persistence.Mongo,
     url: mongoCon
   },
   http: {
-    port:1884,
+    port: 1883,
     bundle: true
   }
 }
@@ -35,9 +34,10 @@ mqttServ.on('ready', ready)
 // Triggers when new message is published
 mqttServ.on('published', function (packet, client) {
   console.log(packet.topic + ': ' + packet.payload)
+
 })
 
-function ready () {
+function ready() {
   console.log('Mosca server is up and running')
 }
 
