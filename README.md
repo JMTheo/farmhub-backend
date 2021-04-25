@@ -28,9 +28,3 @@ Agora para iniciar o servidor digite
 ```bash
 yarn dev
 ```
-
-## Membros do grupo
-- João Matheus
-- José Augusto
-- Patrick Wesley
-- Wesley Vitorio
