@@ -1,11 +1,7 @@
-# iPlant
+# FarmHub
 
-Automação de uma horta com arduino, o projeto foi criado para a disciplina de Microcontroladores e IoT.
+Automação de uma horta com arduino
 Este repositório é referente ao backend, nele contendo a estrutura já pronta para as rotas rest assim como o Broker MQTT.
-
-TO DO:
-- [ ] Arranjar um nome melhor para o projeto
-
 
 ## Instalação
 
