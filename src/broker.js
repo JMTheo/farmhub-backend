@@ -1,17 +1,5 @@
 const mosca = require('mosca')
-// Define connection to MongoDB
-//const mongoCon = process.env.MONGO_ONLINE_URI
 
-// This settings is required to enable persistent session feature.
-// All messages will be stored in MongoDB
-// const ascoltatore = {
-//   type: 'mongo',
-//   url: mongoCon,
-//   pubsubCollection: 'ascoltatori',
-//   mongo: {}
-// }
-//backend: ascoltatore,
-// Final settings for Mosca MQTT broker
 const settings = {
   port: 3000,
   http: {

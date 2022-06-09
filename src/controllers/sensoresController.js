@@ -1,5 +1,5 @@
 exports.get = (req, res, next) => {
-  res.render('sensores', { title: 'home', message: 'Hello world caraio', menuOpt: 'Home' })
+  res.render('sensores', { title: 'home', message: 'Hello world', menuOpt: 'Home' })
 }
 
 exports.post = (req, res, next) => {
